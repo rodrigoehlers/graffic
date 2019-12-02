@@ -15,7 +15,7 @@
         android:id="@+id/navigation_history"
         android:name="com.graffic.ui.custom.CustomFragment"
         android:label="@string/title_history"
-        tools:layout="@layout/fragment_dashboard" />
+        tools:layout="@layout/fragment_history" />
 
     <fragment
         android:id="@+id/navigation_answer_mode"
