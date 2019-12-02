@@ -2,16 +2,14 @@ package com.graffic.ui
 
 import android.content.Context
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.graffic.R
 import com.graffic.data.Config
-import kotlinx.android.synthetic.main.item.view.*
 
-class RecyclerAdapter(val items : ArrayList<Config>, val context: Context) : RecyclerView.Adapter<ViewHolder>() {
+class RecyclerAdapter(private val items: ArrayList<Config>, private val context: Context) :
+    RecyclerView.Adapter<ViewHolder>() {
 
-    // Gets the number of animals in the list
     override fun getItemCount(): Int {
         return items.size
     }
@@ -21,14 +19,9 @@ class RecyclerAdapter(val items : ArrayList<Config>, val context: Context) : Rec
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        holder?.tvNumber?.text = items.get(position).toString()
+        holder?.tvNumber?.text = items[position].number.toString()
+        holder?.tvTimestamp?.text = items[position].timestamp.toString()
     }
 }
 
-class ViewHolder (view: View) : RecyclerView.ViewHolder(view) {
-    // Holds the TextView that will add each animal to
-    val tvNumber = view.number
-    val tvTimestamp = view.timestamp
-
-}
 

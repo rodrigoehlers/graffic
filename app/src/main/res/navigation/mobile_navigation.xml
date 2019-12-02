@@ -7,13 +7,13 @@
 
     <fragment
         android:id="@+id/navigation_custom"
-        android:name="com.graffic.ui.history.HistoryFragment"
+        android:name="com.graffic.ui.custom.CustomFragment"
         android:label="@string/title_custom"
         tools:layout="@layout/fragment_custom" />
 
     <fragment
         android:id="@+id/navigation_history"
-        android:name="com.graffic.ui.custom.CustomFragment"
+        android:name="com.graffic.ui.history.HistoryFragment"
         android:label="@string/title_history"
         tools:layout="@layout/fragment_history" />
 
