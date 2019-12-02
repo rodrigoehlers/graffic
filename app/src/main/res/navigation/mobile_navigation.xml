@@ -12,12 +12,6 @@
         tools:layout="@layout/fragment_custom" />
 
     <fragment
-        android:id="@+id/navigation_history"
-        android:name="com.graffic.ui.history.HistoryFragment"
-        android:label="@string/title_history"
-        tools:layout="@layout/fragment_history" />
-
-    <fragment
         android:id="@+id/navigation_answer_mode"
         android:name="com.graffic.ui.answer.AnswerModeFragment"
         android:label="@string/title_answer_mode"

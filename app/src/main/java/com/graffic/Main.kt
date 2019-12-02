@@ -1,5 +1,7 @@
 package com.graffic
 
+import android.content.Intent
+import android.content.IntentFilter
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.findNavController
@@ -8,8 +10,8 @@ import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
+
 class Main : AppCompatActivity() {
-    private val RECORD_REQUEST_CODE = 101
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -21,10 +23,14 @@ class Main : AppCompatActivity() {
         // menu should be considered as top level destinations.
         val appBarConfiguration = AppBarConfiguration(
             setOf(
-                R.id.navigation_custom, R.id.navigation_history, R.id.navigation_answer_mode
+                R.id.navigation_custom, R.id.navigation_answer_mode
             )
         )
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
+
+        val intentFilter = IntentFilter(Intent.ACTION_CALL)
+        applicationContext.registerReceiver(CallScreeningService(), intentFilter)
+
     }
 }
