@@ -5,6 +5,8 @@ import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
 
+import com.graffic.data.Config;
+
 public class CallService {
     private final Context context;
 
@@ -13,8 +15,8 @@ public class CallService {
     }
 
     @SuppressLint("MissingPermission")
-    public void startCall(String number) {
-        Intent intent = new Intent(Intent.ACTION_CALL, Uri.parse("tel:" + number));
+    public void start(Config config) {
+        Intent intent = new Intent(Intent.ACTION_CALL, Uri.parse("tel:" + config.getNumber()));
         context.startActivity(intent);
     }
 }

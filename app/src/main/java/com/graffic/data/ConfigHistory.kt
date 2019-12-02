@@ -6,8 +6,8 @@ import androidx.room.Room
 class ConfigHistory(context: Context) {
     val history = ArrayList<Config>()
     val db = Room.databaseBuilder(
-    context,
-    AppDatabase::class.java, "database-name"
+        context,
+        AppDatabase::class.java, "database-name"
     ).build()
 
     fun getConfigHistory(): List<Config> {
