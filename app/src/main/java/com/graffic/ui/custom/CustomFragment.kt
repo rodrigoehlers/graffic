@@ -17,17 +17,11 @@ class CustomFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-<<<<<<< HEAD
-        val root = inflater.inflate(R.layout.fragment_history, container, false)
-
-        return root
-=======
         return inflater.inflate(R.layout.fragment_dashboard, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
->>>>>>> 198bccf5323737c914e7c2e235527a8f6c901fb4
     }
 }
