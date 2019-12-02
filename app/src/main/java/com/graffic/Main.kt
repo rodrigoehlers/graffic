@@ -1,9 +1,9 @@
 package com.graffic
 
-import android.content.Intent
-import android.content.IntentFilter
+import android.Manifest
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.app.ActivityCompat
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupActionBarWithNavController
@@ -26,11 +26,14 @@ class Main : AppCompatActivity() {
                 R.id.navigation_custom, R.id.navigation_answer_mode
             )
         )
+
+        ActivityCompat.requestPermissions(
+            this,
+            arrayOf(Manifest.permission.ANSWER_PHONE_CALLS),
+            1
+        )
+
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
-
-        val intentFilter = IntentFilter(Intent.ACTION_CALL)
-        applicationContext.registerReceiver(CallScreeningService(), intentFilter)
-
     }
 }

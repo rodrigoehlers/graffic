@@ -1,5 +1,8 @@
 package com.graffic.ui.custom
 
+import android.annotation.SuppressLint
+import android.content.Intent
+import android.content.IntentFilter
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -20,11 +23,15 @@ class CustomFragment : Fragment() {
         return inflater.inflate(R.layout.fragment_custom, container, false)
     }
 
+    @SuppressLint("MissingPermission")
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        val cs = CallService(context)
+        val cs = CallService()
         super.onViewCreated(view, savedInstanceState)
+        val intentFilter = IntentFilter(Intent.ACTION_CALL)
+        context?.registerReceiver(cs, intentFilter)
         start.setOnClickListener {
-            cs.start(getConfig())
+            cs.start(context, getConfig())
+
         }
     }
 
