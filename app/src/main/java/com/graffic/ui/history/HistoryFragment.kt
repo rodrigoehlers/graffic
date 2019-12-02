@@ -28,5 +28,7 @@ class HistoryFragment : Fragment() {
         configs.add(Config(2, "004917651325245", 4, 60, 30, System.currentTimeMillis()))
         history_list.adapter = RecyclerAdapter(configs, this.requireContext())
         history_list.layoutManager = LinearLayoutManager(context);
+
+
     }
 }
