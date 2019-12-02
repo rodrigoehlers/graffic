@@ -9,7 +9,7 @@
         android:id="@+id/navigation_custom"
         android:name="com.graffic.ui.history.HistoryFragment"
         android:label="@string/title_custom"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_custom" />
 
     <fragment
         android:id="@+id/navigation_history"

@@ -8,4 +8,9 @@
     <string name="button_disable">Disable</string>
     <string name="text_view_enabled">Enabled</string>
     <string name="text_view_disabled">Disabled</string>
+    <string name="edit_text_phone_number">Phone number</string>
+    <string name="edit_text_amount">Amount</string>
+    <string name="edit_text_call_duration">Call duration</string>
+    <string name="edit_text_pause_duration">Pause duration (in between calls)</string>
+    <string name="text_view_only_on">Only on:</string>
 </resources>

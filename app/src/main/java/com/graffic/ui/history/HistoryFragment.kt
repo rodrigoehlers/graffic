@@ -19,7 +19,7 @@ class HistoryFragment : Fragment() {
     ): View? {
         historyViewModel =
             ViewModelProviders.of(this).get(HistoryViewModel::class.java)
-        val root = inflater.inflate(R.layout.fragment_home, container, false)
+        val root = inflater.inflate(R.layout.fragment_custom, container, false)
 
         return root
     }
